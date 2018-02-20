@@ -10,7 +10,9 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
+import { AuthGuardService } from "./auth-guard.service";
 import { appRoute } from './app.routes';
+
 
 
 @NgModule({
@@ -29,7 +31,7 @@ import { appRoute } from './app.routes';
     InputsModule
 
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
